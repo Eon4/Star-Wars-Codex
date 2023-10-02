@@ -10,8 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.35.7",
+    "graphql": "^16.8.1",
+    "graphql-request": "^6.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-spinners": "^0.13.8",
+    "sass": "^1.68.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
