@@ -1,6 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { request } from "graphql-request";
 import { getFilms } from "../Query/getFilms";
+import Popup from 'reactjs-popup';
+import React from "react";
+import style from '../Style/main.module.scss'
 
 export const Main = () => {
   const { data, isLoading, isError, error } = useQuery({
@@ -23,13 +26,22 @@ export const Main = () => {
   }
 
   return (
-    <>
+    <div className={style.container}> {/* Use the container class from the CSS module */}
       <h1>StarWars Films</h1>
       <ul>
-        {data.allFilms.films.map((item, index) => {
-          return <li key={index}>{item.title}</li>;
-        })}
+        {data.allFilms.films.map((item, index) => (
+          <React.Fragment key={index}>
+            <Popup trigger={<button className={style.movieButton}>{item.title}</button>}>
+              <div className={style.popupContent}> {/* Apply the popupContent class */}
+                <h2>{item.title}</h2>
+                <p>Release Date: {item.releaseDate}</p>
+                <p>Director: {item.director}</p>
+                {/* You can add more movie information here */}
+              </div>
+            </Popup>
+          </React.Fragment>
+        ))}
       </ul>
-    </>
+    </div>
   );
 };
