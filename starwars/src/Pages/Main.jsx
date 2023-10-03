@@ -4,6 +4,8 @@ import { getFilms } from "../Query/getFilms";
 import Popup from 'reactjs-popup';
 import React from "react";
 import style from '../Style/main.module.scss'
+import PuffLoader from "react-spinners/PuffLoader";
+
 
 export const Main = () => {
   const { data, isLoading, isError, error } = useQuery({
