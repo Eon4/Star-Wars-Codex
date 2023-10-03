@@ -31,10 +31,10 @@ export const Main = () => {
       <ul>
         {data.allFilms.films.map((item, index) => (
           <React.Fragment key={index}>
-            <Popup trigger={<button className={style.movieButton}>{item.title}</button>}>
-              <div className={style.popupContent}> {/* Apply the popupContent class */}
+            <Popup trigger={<button>{item.title}</button>}>
+              <div className={style.modal}>
                 <h2>{item.title}</h2>
-                <p>Release Date: {item.releaseDate}</p>
+                <p className={style.para}>Release Date: {item.releaseDate}</p>
                 <p>Director: {item.director}</p>
                 {/* You can add more movie information here */}
               </div>
