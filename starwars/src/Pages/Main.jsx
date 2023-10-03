@@ -20,7 +20,7 @@ export const Main = () => {
   console.log("Data", data);
 
   if (isLoading) {
-    return <p>Loading... </p>;
+    return <PuffLoader color="#25ac0d" />;
   }
 
   if (isError) {
@@ -37,8 +37,7 @@ export const Main = () => {
               <div className={style.modal}>
                 <h2>{item.title}</h2>
                 <p className={style.para}>Release Date: {item.releaseDate}</p>
-                <p>Director: {item.director}</p>
-                {/* You can add more movie information here */}
+                <p className={style.para}>Director: {item.director}</p>
               </div>
             </Popup>
           </React.Fragment>
