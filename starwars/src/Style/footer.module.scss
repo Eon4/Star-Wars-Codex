@@ -1,13 +1,14 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
 
 
 footer {
-    background-color: #968888f9;
+    background-color: #1c1a1af9;
     color: #FFFFFF;
     padding: 40px;
-    margin-top: 80px;
-    // border-top: red;
-    // border-radius: 3px;
-    // border-style:ridge;
+    margin-top: 60px;
+    border-top: rgb(255, 225, 0);
+    border-radius: 3px;
+    border-style:double;
 
     p {
         font-size: 14px;
@@ -16,8 +17,10 @@ footer {
 
     h2{
         font-size: 16px;
+        font-family: 'Star Wars', sans-serif;
+
         display: center;
-        color: rgb(255, 255, 255);
+        color: rgb(255, 225, 0);
         margin-left: auto;
         margin-right: auto;
     }
@@ -28,4 +31,14 @@ footer {
     // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
     // align-items: center;
     gap: 8px;
+}
+
+.blue{
+    width: 50px;
+    float: left;
+}
+
+.green{
+    width: 50px;
+    float: right;
 }

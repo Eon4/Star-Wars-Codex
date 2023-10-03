@@ -20,7 +20,7 @@ export const Main = () => {
   console.log("Data", data);
 
   if (isLoading) {
-    return <PuffLoader color="#25ac0d" />;
+    return <PuffLoader className={style.loader} color="#25ac0d" />;
   }
 
   if (isError) {
@@ -29,7 +29,7 @@ export const Main = () => {
 
   return (
     <div className={style.container}> {/* Use the container class from the CSS module */}
-      <h1>StarWars Films</h1>
+      <h1>The World of Star Wars Movies</h1>
       <ul>
         {data.allFilms.films.map((item, index) => (
           <React.Fragment key={index}>
